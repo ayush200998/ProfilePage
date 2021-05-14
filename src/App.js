@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react'
+import UserInfo from './components/UserInfo'
 
 function App() {
+  const[result, setResult] = useState({
+    basic: {},
+    blogs:[],
+    client_postings:[],
+    crew_postings: [],
+    events: [],
+    is_logged_in: false,
+    locations: [],
+    portfolio: [],
+    professions: [],
+    questions: [],
+    skills: [],
+  })
+
+  useEffect(() => {
+    fetch('https://crewbella.com/user/api/profile/ishanmathur')
+      .then(response => response.json())
+      .then(res => {
+        setResult({
+          basic: res.basic,
+          blogs: res.blogs,
+          client_postings: res.client_postings,
+          crew_postings: res.crew_postings,
+          events: res.events,
+          is_logged_in: res.is_logged_in,
+          locations: res.locations,
+          portfolio: res.portfolio,
+          professions: res.professions,
+          questions: res.questions,
+          skills: res.skills,
+        })
+      })
+  },[])
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserInfo basic={result.basic} result={result} />
     </div>
   );
 }

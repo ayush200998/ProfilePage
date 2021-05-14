@@ -1,0 +1,92 @@
+h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.userinfo{
+  height: 130vh;
+  font-family: Didot, serif;
+  background-image: linear-gradient(to bottom right, rgb(48, 46, 85), rgb(200, 200, 200));
+  /* background-color: rgb(60, 46, 70); */
+}
+.userinfo_profile{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: solid 1px white;
+    margin-right: 10px;
+}
+
+.userinfo_image{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    left: 14%;
+    top: 7%;
+}
+
+.userinfo_following{
+    font-size: 1.2rem;
+    color: rgb(224, 224, 224);
+}
+
+.userinfo_bio{
+    position: relative;
+    left: 12%;
+    top: 9%;
+    margin-top: 5px;
+}
+
+h5{
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 600;
+    color: rgb(224, 224, 224);;
+}
+
+.userinfo_dob{
+    font-size: 1.2rem;
+    color: rgb(224, 224, 224);;
+}
+
+.userinfo_details{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 100%;
+}
+
+.userinfo_scrollbar{
+    display: inline-block;
+    /* display: flex;
+    flex-direction: column; */
+    border-radius: 5px;
+    max-width: 20%;
+    background-color: rgb(190, 230, 253);
+    position: relative;
+    top: 10%;
+    padding: 10px;
+    padding-bottom: 35%;
+}
+
+button{
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: transparent;
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-family: Didot, serif;
+    color: rgb(48, 46, 85);
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(197, 136, 255);
+}
+
+button:hover{
+    border-left: 3px solid rgb(48, 46, 85);
+}

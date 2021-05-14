@@ -1,0 +1,26 @@
+.posts{
+    position: relative;
+    left: 35%;
+    bottom: 50%;
+    background-color: white;
+    color: rgb(48, 46, 85);
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    max-width: 40%;
+    margin-bottom: 20px;
+    border: solid 1px black;
+}
+
+.posts_images{
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.posts_images:hover{
+    transform: scale(1.5);
+    transition: transform 300ms;
+}
